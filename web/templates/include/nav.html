@@ -1,0 +1,26 @@
+<!--顶部-->
+<header>
+  <div class="topbg">
+    <ul class="topnav">
+      <a href="/" target="_blank">Home</a><a href="#" target="_blank">官方微博</a><a href="#" target="_blank">关于我们</a>
+    </ul>
+  </div>
+  <div class="topbgline"></div>
+  <div class="toptitle">
+    <div class="logo_l f_l"><h2>{{ website_welcome }}</h2></br><h3>{{ website_desc }}</h3></div>
+    <div class="logo_r f_r">
+
+        <script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=197861334595503369' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
+    </div>
+  </div>
+
+<!--导航-->
+  <nav id="topnav">
+    <ul>
+        {% for nav in nav_list %}
+            <a href="{{ nav.url }}">{{ nav.name }}</a>
+        {% endfor %}
+    </ul>
+    <script src="static/skin/jiyouhui/js/silder.js"></script>
+  </nav>

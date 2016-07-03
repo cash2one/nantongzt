@@ -1,0 +1,7 @@
+<div class="cloud">
+      <h3>热门标签</h3>
+      <ul>
+          {% for tag in alltags %}
+                <a href="{% url 'tag-detail-view' tag %}" target="_blank">{{ tag }}</a>
+          {% endfor %}
+    </div>

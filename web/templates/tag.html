@@ -1,0 +1,40 @@
+{% extends "./base.html" %}
+{% block title %}{{ tag_name }}_{{ website_welcome }}{% endblock %}
+
+{% block main %}
+<article>
+<!--最新文章列表-->
+  <div class="l_box f_l">
+    <div class="blank"></div>
+
+    <div class="topnews">
+ <h3>您现在的位置是：<a href="/">首页</a>&nbsp;>&nbsp;
+          <a href="{{ article.category.get_absolute_url }}">{{ tag_name }}</a>
+         <h2><b>{{ category_title }}</b></h2>
+        <!--首页列表文章-->
+      {% for post in article_list %}
+          {% include "./include/home_post.html" %}
+      {% endfor %}
+    </div>
+
+      <!--分页-->
+            {% if page_obj%}
+            {% include './include/page.html' %}
+            {% endif %}
+    </div>
+
+<!-- 右边侧栏管理 -->
+  <div class="r_box f_r">
+    {% include './widgets/about_us.html' %}  <!--关注我们-->
+    <div class="ad"></div>
+
+    {% include './widgets/liebiao.html' %}   <!--列表切换-->
+    {% include './widgets/tags.html' %}         <!--标签云-->
+    {% include './widgets/host_wenzhang.html' %}  <!--热门文章-->
+  <div>
+
+  </div>
+  </div>
+</article>
+
+{% endblock %}

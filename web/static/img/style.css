@@ -1,0 +1,176 @@
+/*
+Theme Name: canglongsheji
+Theme URI: http://www.hongzhan188.com/
+Description: 本主题由: <a href="http://www.hongzhan188.com/">canglong</a>制作.
+Version: 1.0
+Author: yenanqiu
+Author URI: http://www.hongzhan188.com/
+Tags: widgets
+*/
+
+/* global css */
+body{ margin:0 auto; font-size:12px; font-family:'宋体',Arial,Verdana,Sans-Serif;}
+div,form,ul,ol,li,span,p{margin:0 auto; padding:0; border:0;}
+img,a img{margin:0; padding:0; border:none;}
+ul,ol,li{list-style:none;}
+table,td,input{font-size:12px;}
+h1,h2,h3,h4,h5,h6{ margin:0 auto;}
+h1 {font-size:28px;}
+h2 {font-size:22px;}
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+h5 {font-size:14px;}
+h6 {font-size:14px;}
+
+.clear{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}
+
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #003366;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+
+.m{ width:1000px; margin:0px auto; overflow:hidden}
+.logo{ width:683px; float:left; overflow:hidden}
+.so{ width:317px; float:right; overflow:hidden; background:url("diwen_02.jpg") no-repeat top center}
+.shoucang{ height:28px; line-height:28px; margin-top:20px; margin-bottom:20px; text-align:center}
+
+.bdcs-search-form-input {
+border-color: #a6a6a6;
+margin-right: 10px;
+width: 246px;
+height: 26px;
+line-height: 26px;
+font-family: Arial,SimSun,sans-serif;
+color: #000000;
+font-size: 14px;
+border-radius: 0px;
+background-color: #FFFFFF;
+}.bdcs-search-form-input {
+border-width: 1px;
+border-style: solid;
+display: inline-block;
+vertical-align: top;
+text-indent: 5px;
+background-color: #fff;
+float: left;
+}.bdcs-main * {
+box-sizing: content-box;
+margin: 0;
+padding: 0;
+float: none;
+clear: none;
+overflow: hidden;
+white-space: nowrap;
+word-wrap: normal;
+border: 0;
+background: 0 0;
+width: auto;
+height: auto;
+max-width: none;
+min-width: none;
+max-height: none;
+min-height: none;
+border-radius: 0;
+box-shadow: none;
+transition: none;
+text-align: left;
+}.bdcs-search-form-submit {
+border-color: #a6a6a6;
+height: 30px;
+width: 50px;
+background-color: #f5f5f5;
+color: #000000;
+font-family: Arial,SimSun,sans-serif;
+font-size: 14px;
+border-radius: 0px;
+}.bdcs-search-form-submit {
+display: inline-block;
+cursor: pointer;
+border-width: 1px;
+border-style: solid;
+vertical-align: top;
+text-align: center;
+width: 50px;
+}
+.nav{ height:35px; background:url("1.gif") repeat-x;}
+.nav li{ display:inline; line-height:37px; font-size:14px}
+.nav li a{ margin:0px 25px}
+.mainleft{ width:780px; float:left}
+.mainrig{ width: 220px; float:right}
+.jianjie{ height:222px; overflow: hidden; background:url("bg1.gif") no-repeat; margin-top:10px}
+.huandeng{ width:308px; float:left}
+.jianjiecon{ width:428px; float:right; margin-right:15px; padding-top:25px; line-height:18px}
+.xinwen{ width:259px; float:left; overflow:hidden; border:1px solid #CDCFE4; border-right:none; margin-top:10px}
+.newstit{ background: url("tit.gif") repeat-x; height:27px; line-height:24px; font-size:16px; padding-left:20px; padding-right:20px}
+.newstit strong{ font-size:14px; color:#293658; font-weight:bold; background:url("tit2.gif") no-repeat left center; padding-left:15px}
+.newstit span{ float:right; color: #CC0000; font-size:12px}
+.newstit span s{ color:#4C4C4C;}
+.newslist{ margin:0px; padding:10px}
+.newslist li{ height:25px; line-height:25px; background:url("dian.gif") no-repeat left center; padding-left:15px; overflow:hidden}
+ul{ margin:0px; padding:0px}
+.flash{ margin-top:10px}
+.lianxi{ width:218px; height:222px; overflow:hidden; background:url("lianxi.gif") no-repeat; float:right; margin-top:8px; }
+.lianxicon{ margin-top:45px; margin-left:15px; margin-right:15px; color: #071e5f;
+line-height: 20px;}
+.zizhi{ background:#E9EEF8; border:1px solid #CCCCCC; overflow:hidden; margin-top:12px; height:555px}
+.tit2{ letter-spacing: 1px;
+color: #FFFFFF;
+font-weight: bold;
+font-size: 15px;
+padding-top: 2px;height: 25px;
+background-color: rgb(175, 182, 198);
+text-align: -webkit-center; line-height:25px; text-align:center}
+.zizhilist{ height:300px}
+.flink li{ overflow:hidden; height:24px; line-height:24px}
+.flink ul{ margin:0px; padding:10px}
+.foot{ margin-top:10px; text-align:center}
+.footnav{ background:#2C4256; height:30px; line-height:30px; color:#FFFFFF; text-align:center}
+.footnav a{ color:#FFFFFF; margin:0px 7px}
+.footnav li{ display:inline}
+.copyright{ background:#EFEFEF; border:1px solid #CCCCCC; overflow:hidden; padding-top:15px; line-height:22px; text-align:center; padding-bottom:15px}
+.conleft{ width:765px; float:left; overflow:hidden; margin-top:10px}
+.conrig{ width:223px; float:right; overflow:hidden; border:1px solid #DDDDDD; background:#E9EEF8; margin-top:10px }
+.conrigtit{ background:url("tit3.gif"); height:27px; line-height:28px; font-size:14px; font-weight:bold; color:#333333; padding-left:40px}
+.lianxi2{ padding:10px; line-height:22px}
+.weizhi{ background:url("bgy.jpg") no-repeat; height:28px; padding-left:35px; line-height:25px; font-size:14px; font-weight:bold}
+
+.contxt{ line-height:26px; font-size:14px; margin-right:10px}
+.contxt h1{ height:36px; line-height:36px; margin-top:15px; margin-bottom:15px; font-size:18px; font-weight:bold; text-align:center}
+
+.next{ line-height:22px}
+.dizhi{ margin-top:15px; margin-bottom:15px}
+.list li{ line-height:28px; height:28px; background:url("dian.gif") no-repeat left center; padding-left:13px}
+.list ul{ padding:10px}
+
+.pagebar a{ border:1px solid #DBDBDB; padding:5px 8px; margin:0px 3px}
+.pagebar { height:40px; margin-left:15px}
+.now-page{ border:1px solid #DBDBDB; padding:5px 8px; margin:0px 3px; background:#E4E4E4}
+.zizhilist img{ width:200px; height:50px; margin-bottom:10px }
+.zizhilist{ text-align:center;}
+
+
+#ibanner { position:relative; width:300px; height:202px; overflow:hidden; margin-top:10px; margin-left:10px}
+#ibanner_pic {}
+#ibanner_pic a { position:absolute; top:0; display:block; width:300px; height:202px; overflow:hidden; }
+#ibanner_btn { position:absolute; z-index:9999; right:5px; bottom:5px; font-weight:700; font-family:Arial; }
+#ibanner_btn span { display:block; float:left; margin-left:4px; padding:0 5px; background: #C9C9C9; cursor:pointer; }
+#ibanner_btn .normal { height:20px; margin-top:8px; border:1px solid #999; color:#999; font-size:16px; line-height:20px; color:#FFFFFF }
+#ibanner_btn .current { border:1px solid #B4B4B4; color:#FF5300; font-size:16px;height:20px; line-height:20px; margin-top:8px;  }
+
+#ibanner_pic img{ width:300px; height:202px; background:#FFFFFF}
+
+
+.r_sub_left{ width:50%; height:100%; background:#9C3; float:left}
+.r_sub_right{ width:50%; height:100%; background:#9FC; float:right}

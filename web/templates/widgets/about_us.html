@@ -1,0 +1,42 @@
+    <div class="tit01">
+      <h3>关注我们</h3>
+     <div class="gzwm">
+        <ul>
+          <li><a class="xlwb" href="#" target="_blank">新浪微博</a></li>
+          <li><a class="txwb" href="#" target="_blank">腾讯微博</a></li>
+          <li><a class="rss" href="#" target="_blank">邮箱</a></li>
+          <li><a class="wx" href="#" onmouseover="tip.start(this)" tips="<font color='#fff'>关注<b>张特</b>微信账号</font><br><b><img src='http://www.jiyouh.com/skin/jiyouhui/images/weixintop.jpg'></b>">微信</a></li>
+        </ul>
+      </div>
+    </div>
+ <div id="mjs:tip" class="tip" style="position:absolute;left:0;top:0;display:none;"> </div>
+ <script>
+		  var tip={$:function(ele){
+  if(typeof(ele)=="object")
+    return ele;
+  else if(typeof(ele)=="string"||typeof(ele)=="number")
+    return document.getElementById(ele.toString());
+    return null;
+  },
+  mousePos:function(e){
+    var x,y;
+    var e = e||window.event;
+    return{x:e.clientX+document.body.scrollLeft+document.documentElement.scrollLeft,
+y:e.clientY+document.body.scrollTop+document.documentElement.scrollTop};
+  },
+  start:function(obj){
+    var self = this;
+    var t = self.$("mjs:tip");
+    obj.onmousemove=function(e){
+      var mouse = self.mousePos(e);
+      t.style.left = mouse.x + 10 + 'px';
+      t.style.top = mouse.y + 10 + 'px';
+      t.innerHTML = obj.getAttribute("tips");
+      t.style.display = '';
+    };
+    obj.onmouseout=function(){
+      t.style.display = 'none';
+    };
+  }
+  }
+		  </script>

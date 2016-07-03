@@ -1,0 +1,11 @@
+<div class="tuwen">
+      <h3>热门文章</h3>
+ <ul>
+     {% for post in hot_article_list %}
+
+        <li><a href="{{ post.get_absolute_url }}" target="_blank" title="{{ post.title }}"><img src="{{ post.img }}" alt="{{ post.title }}"><b>{{ post.title| slice:'35'}}</b></a>
+                  <p><span class="tulanmu">{{ post.category.name }}</span><span class="tutime">{{ post.pub_time|date:"Y-m-d" }}</span></p>
+        </li>
+    {% endfor %}
+</ul>
+    </div>

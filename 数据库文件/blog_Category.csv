@@ -1,0 +1,9 @@
+﻿"",cate_ID,cate_Name,cate_Order,cate_Intro,cate_Count,cate_URL,cate_ParentID,cate_Template,cate_LogTemplate,cate_FullUrl,cate_Meta
+"",22,资讯,0,"",0,zx,0,"","","",""
+"",23,婚姻调查,0,"",10,hydc,22,"","","",""
+"",24,专业清欠,0,"",5,zyqq,22,"","","",""
+"",25,商务调查,0,"",6,sswq,22,"","","",""
+"",26,打假维权,0,"",4,djwq,22,"","","",""
+"",27,财产调查,0,"",4,ccdc,22,"","","",""
+"",28,律师服务,0,"",4,lsfw,22,"","","",""
+"",29,公司新闻,0,"",25,gsxw,0,"","","",""

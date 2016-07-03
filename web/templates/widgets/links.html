@@ -1,0 +1,9 @@
+<div class="links">
+  <h3><span>[<a href="index.html">申请友情链接</a>]</span>友情链接</h3>
+    <ul>
+      {% for link in links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+  </ul>
+</div>
+<p class="banquan">本博客90%以上的文章是原创(接近100%),如有转发,还望能留下版权地址!{{ value|default:"指定的内容" }}</p>

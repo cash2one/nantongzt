@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+
+{% block title %}所有文章-{{website_welcome}}{% endblock %}
+
+
+{% block content %}
+
+<div class="m">
+  <div class="conleft">
+    <div class="weizhi">当前位置：<a href="{{host}}">首页</a> > <a href="{{host}}{{path}}">所有文章</a></div>
+	<div class="contxt">
+  <h1>所有文章</h1>
+    {%for category in  category_list %}
+         <h3><a href="{{category.get_absolute_url()}}"> {{ category.name }} </a></h3>
+
+        {%for post in category.article_set.all() %}
+            <ul> <li><a href="{{post.get_absolute_url() }}">{{ post.title}}</a></li></ul>
+        {%endfor%}
+        <hr>
+    {%endfor%}
+
+  </div>
+  </div>
+
+
+{% include "./include/cebian.html" %}
+</div>
+
+{% endblock %}

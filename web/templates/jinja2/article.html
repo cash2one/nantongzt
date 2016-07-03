@@ -1,0 +1,49 @@
+{% extends "./base.html" %}
+{% block title %}{{article.title}}-{{ website_welcome }}{% endblock %}
+{% block content %}
+
+<div class="m">
+  <div class="conleft">
+    <div class="weizhi">当前位置：<a href="{{host}}">首页</a>> <a href="{{ article.category.get_absolute_url() }}">{{article.category.name}}</a> ><a href="{{host}}{{path}}">{{article.title}}</a></div>
+	<div class="contxt">
+  <h1>{{article.title}}</h1>
+
+{{ romdon_article_list[1].summary|safe }}
+  {{article.content | safe }}
+{{ romdon_article_list[0].summary|safe }}
+
+{% if n_article %}
+    </br>下一篇:<a id="stb_btn_next" href="{{ n_article.get_absolute_url() }}" title="{{n_article.title}}">{{n_article.title}}</a><br />
+{%endif%}
+
+{% if s_article %}
+    上一篇: <a id="stb_btn_prev" href="{{ s_article.get_absolute_url() }}" title="{{s_article.title}}">{{s_article.title}}</a><br />
+{%endif%}
+
+<div class="dizhi">本文完整地址,转载请注明：<a href="{{host}}{{path}}">{{host}}{{path}}</a></div>
+<div class="bdsharebuttonbox"><a href="{{host}}{{path}}#" class="bds_more" data-cmd="more"></a><a href="{{host}}{{path}}#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="{{host}}{{path}}#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="{{host}}{{path}}#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="{{host}}{{path}}#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="{{host}}{{path}}#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="{{host}}{{path}}#" class="bds_bdysc" data-cmd="bdysc" title="分享到百度云收藏"></a><a href="{{host}}{{path}}#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a><a href="{{host}}{{path}}#" class="bds_bdxc" data-cmd="bdxc" title="分享到百度相册"></a><a href="{{host}}{{path}}#" class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a><a href="{{host}}{{path}}#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="{{host}}{{path}}#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin","bdysc","mshare","bdxc","tqf","douban","sqq"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","bdysc","mshare","bdxc","tqf","douban","sqq"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+  </div>
+
+      <hr>
+  <div class="r_sub_left">南通新闻
+    {%for post in romdon_article_list%}
+      <li><a target="_blank" href="{{ post.get_absolute_url() }}">{{ post.title }}</a></li>
+    {%endfor%}
+  </div>
+
+  <div class=" r_sub_right">{{article.category}}
+    {%for post in xg_article%}
+      <li><a target="_blank" href="{{ post.get_absolute_url() }}">{{ post.title }}</a></li>
+    {%endfor%}
+  </div>
+
+  </div>
+{% include "./include/cebian.html" %}
+</div>
+
+{%endblock%}
+
+
+
+

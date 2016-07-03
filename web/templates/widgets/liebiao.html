@@ -1,0 +1,71 @@
+
+     <div class="moreSelect" id="lp_right_select">
+<script>
+window.onload = function ()
+{
+	var oLi = document.getElementById("tab").getElementsByTagName("li");
+	var oUl = document.getElementById("ms-main").getElementsByTagName("div");
+	
+	for(var i = 0; i < oLi.length; i++)
+	{
+		oLi[i].index = i;
+		oLi[i].onmouseover = function ()
+		{
+			for(var n = 0; n < oLi.length; n++) oLi[n].className="";
+			this.className = "cur";
+			for(var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+			oUl[this.index].style.display = "block"
+		}	
+	}
+}
+</script>
+      <div class="ms-top">
+        <ul class="hd" id="tab">
+          <li class="cur"><a href="/">随机推荐</a></li>
+            {% if home %}<li><a href="/">猜你喜欢</a></li>{% else %}<li><a href="/">最新文章</a></li>{% endif %}
+
+          <li><a href="/">站长推荐</a></li>
+        </ul>
+      </div>
+
+
+<!--随机文章-->
+      <div class="ms-main" id="ms-main">
+        <div style="display: block;" class="bd bd-news" >
+          <ul>
+              {% for post in romdon_article_list %}
+                  <li><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+              {% endfor %}
+        </div>
+
+
+
+          <!--最新文章 内容,首页就展示随机文章-->
+        <div  class="bd bd-news">
+          <ul>
+          {% if home %}
+              {% for post in dromdon_article_list %}
+                <li><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+              {% endfor %}
+          {% else %}
+              {% for post in new_article_list %}
+                  <li><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+              {% endfor %}
+          {% endif %}
+          </ul>
+        </div>
+
+
+<!--站长推荐-->
+        <div class="bd bd-news">
+          <ul>
+
+              {% for post in rank_article_list %}
+                  <li><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+              {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+      <!--ms-main end -->  
+    </div>

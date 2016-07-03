@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{% block title %}{% endblock %}</title>
+<meta name="description" content="{% block desc %}{% endblock %}" />
+<meta name="keywords" content="{% block kw %}{% endblock %}" />
+<link rel="stylesheet" type="text/css" href="/static/img/style.css" media="screen" />
+<script src="/static/zb_system/script/common.js" type="text/javascript"></script>
+<script src="/static/zb_users/theme/canglong/script/custom.js" type="text/javascript"></script>
+<meta name="baidu-site-verification" content="3Z2EPKMCCE" />
+</head>
+<body>
+{% include "./include/head.html" %}
+{% block content %}{% endblock %}
+{% include "./include/foot.html" %}
+</body>
+</html>

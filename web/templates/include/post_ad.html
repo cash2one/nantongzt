@@ -1,0 +1,4 @@
+欢迎大家加<a href="{{ host }}">{{ website_keywords |first }}</a>微信!
+</br>文章标题:<a href="{{ host }}{{ path }}" title="{{ article.title }}">{{ article.title }}</a>
+</br>链接: {{ host }}{{ path }}
+</br>文本关键词:{% for tag in  article.get_tags %}<a href="{{ host }}{{ path }}">{{ tag }}{%if not forloop.last %},{% endif %}</a>{% endfor %}

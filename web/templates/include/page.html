@@ -1,0 +1,16 @@
+ <div class="page"><a title="Total record"><b>{{paginator.num_pages}}页</b> </a>
+
+
+
+
+    {% if  page_obj.has_previous %} <a href="/"> << </a> <a href="?page={{page_obj.previous_page_number}}"> < </a> {% endif %}
+
+    <b>{{page_obj.number}}</b>
+
+    {% if  page_obj.has_next%}<a href="?page={{page_obj.next_page_number}}">></a><a href="?page={{paginator.num_pages}}">>></a>{% endif %}
+
+</div>
+
+
+
+

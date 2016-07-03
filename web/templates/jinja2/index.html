@@ -1,0 +1,59 @@
+{% extends "./base.html" %}
+
+{% block title %}{{ website_title }}-{{website_welcome}}{% endblock %}
+{% block kw %}南通私家侦探,南通私人侦探,南通调查公司,南通大众调查{% endblock %}
+{% block desc %}南通最好的私家侦探公司，南通私家侦探网，南通大众调查公司，南通最专业的私家侦探，南通好的婚姻调查公司{% endblock %}
+
+{% block content %}
+<div class="m">
+  <div class="mainleft">
+    <div class="jianjie">
+      <div class="huandeng">
+<div id="ibanner">
+<div id="ibanner_pic">
+    {%for post in wenzhang.objects.filter(is_tuijian=1) %}
+
+<a href="{{post.get_absolute_url()}}" target="_blank" title="南通市王某肇事逃逸一案处理"><img src="{{ post.img}}" alt="{{post.title}}" /></a>
+
+    {%endfor%}
+</div>
+</div>
+	   </div>
+      <div class="jianjiecon"> &nbsp;&nbsp;&nbsp;&nbsp;<strong>我们是谁--</strong>南通大众商务调查有限公司是南通唯一合法注册的、江苏省南通市最大的专业从事私家侦探民事、经济、商务调查的南通私家侦探、南通私人侦探公司。n南通重合同守信用企业，南通企业诚信评审委员会指定调查机构。</P><p><strong>大众侦探商务调查是一个有清晰战略目标、有明确概念体系的专业私人侦探公司--</strong>大众调查是中国私家侦探调查行业较早的一批从业者和拓荒者，我们的理论探索将引导中国商务调查行业的发展，我们正在进行的实践将对中国商务调查行业具有开拓性的意义。</p><p><strong>大众商务调查公司</strong>实力雄厚，手续完备，设备先进，优质高效，遵纪守法，具备各类调查资质。我们南通客户管理人员具备国语|粤语|英语|日语等多个语种交流能力，能熟练地与不同国家，地区的客户进行有效地沟通和交流。南通大众四开侦探的行动部门负责人在业务执行上能有效的与各地……</p>
+ </div>
+    </div>
+
+
+<!--设置具体分类-->
+{% for i in [23,24,25,26,27,28] %}
+    {% set jtfenlei = fenlei.objects.get(pk=i) %}
+    <div class="xinwen">
+      <div class="newstit"><span>>> <a href="{{ jtfenlei.get_absolute_url() }}" target="_blank">更多内容</a></span><strong>{{jtfenlei.name}}</strong></div>
+      <div class="newslist">
+
+        <ul>{% for post in jtfenlei.article_set.all() %}
+                <li><a target="_blank" href="{{ post.get_absolute_url() }}">{{post.title}}</a></li>
+            {%endfor%}
+        </ul>
+      </div>
+    </div>
+      {%if i==25%}
+      <div style="clear:both"></div>
+    <div class="flash">
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="778" height="139">
+        <param name="movie" value="/img/zhongJ.swf" />
+        <param name="quality" value="high" />
+        <embed src="/static/img/zhongJ.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="778" height="139"></embed>
+      </object>
+    </div>
+    <div style="clear:both"></div>
+      {%endif%}
+{% endfor %}
+
+
+
+    <div style="clear:both"></div>
+  </div>
+{% include "./include/cebian.html" %}
+</div>
+{% endblock %}
